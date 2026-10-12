@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="zh-TW" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>黃大名 - 個人作品集 | 三重商工 資料處理科</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            background-color: #fcfcfc;
+            /* Subtle macaron gradient background */
+            background-image: radial-gradient(at 0% 0%, hsla(201,100%,94%,1) 0, transparent 50%), 
+                              radial-gradient(at 100% 0%, hsla(339,100%,94%,1) 0, transparent 50%);
+            background-attachment: fixed;
+        }
+        
+        /* Custom macaron colors for timeline dots */
+        .timeline-dot-blue { background-color: #A7C7E7; }
+        .timeline-dot-pink { background-color: #F8C8DC; }
+        .timeline-dot-yellow { background-color: #FDFD96; }
+        .timeline-dot-green { background-color: #B2D8B2; }
+        .timeline-dot-purple { background-color: #CDB4DB; }
+    </style>
+</head>
+<body class="text-gray-800 antialiased selection:bg-pink-200 selection:text-pink-900">
+
+    <!-- Navigation Bar -->
+    <nav class="fixed top-0 w-full z-50 bg-white/70 backdrop-blur-md shadow-sm border-b border-gray-100">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#" class="text-xl font-bold bg-gradient-to-r from-blue-400 to-pink-400 bg-clip-text text-transparent">
+                        黃大名 Portfolio
+                    </a>
+                </div>
+                <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
+                    <a href="#about" class="text-gray-600 hover:text-pink-500 px-3 py-2 rounded-md font-medium transition-colors">關於我</a>
+                    <a href="#study-plan" class="text-gray-600 hover:text-blue-500 px-3 py-2 rounded-md font-medium transition-colors">讀書計畫</a>
+                    <a href="#portfolio" class="text-gray-600 hover:text-purple-500 px-3 py-2 rounded-md font-medium transition-colors">作品集</a>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="sm:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-500 hover:text-gray-700 focus:outline-none p-2">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden sm:hidden bg-white/95 backdrop-blur-md border-b border-gray-100">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-pink-500 hover:bg-pink-50">關於我</a>
+                <a href="#study-plan" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-500 hover:bg-blue-50">讀書計畫</a>
+                <a href="#portfolio" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-purple-500 hover:bg-purple-50">作品集</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Container -->
+    <main class="pt-24 pb-16 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-24">
+
+        <!-- 關於我 (About Me) Section -->
+        <section id="about" class="scroll-mt-24">
+            <div class="flex items-center space-x-3 mb-8">
+                <div class="h-8 w-2 bg-pink-300 rounded-full"></div>
+                <h2 class="text-3xl font-bold text-gray-800">關於我 <span class="text-lg font-normal text-gray-500 ml-2">About Me</span></h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+                
+                <!-- Left Column: Profile Card -->
+                <div class="md:col-span-4 lg:col-span-3 space-y-6">
+                    <div class="bg-blue-50/60 rounded-3xl p-6 shadow-sm border border-blue-100 flex flex-col items-center text-center hover:shadow-md transition-shadow">
+                        <!-- Profile Image -->
+                        <div class="w-32 h-32 rounded-full overflow-hidden mb-4 border-4 border-white shadow-sm bg-white">
+                            <img src="https://placehold.co/200x200/CDB4DB/ffffff?text=大名" alt="黃大名" class="w-full h-full object-cover">
+                        </div>
+                        
+                        <h1 class="text-2xl font-bold text-gray-800">黃大名</h1>
+                        <p class="text-sm font-medium text-blue-600 mt-1">新北市立三重商工</p>
+                        <p class="text-sm text-gray-600 bg-white px-3 py-1 rounded-full shadow-sm mt-2">資料處理科</p>
+
+                        <!-- Interests (Pill tags) -->
+                        <div class="mt-8 w-full text-left">
+                            <h3 class="font-bold text-gray-700 border-b-2 border-blue-200 pb-1 mb-4 flex items-center">
+                                <svg class="w-4 h-4 mr-2 text-blue-500" fill="currentColor" viewBox="0 0 20 20"><path d="M5 4a2 2 0 012-2h6a2 2 0 012 2v14l-5-2.5L5 18V4z"></path></svg>
+                                興趣愛好
+                            </h3>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1.5 bg-pink-100 text-pink-700 rounded-full text-sm font-medium shadow-sm flex items-center hover:bg-pink-200 cursor-default transition-colors">
+                                    📚 閱讀
+                                </span>
+                                <span class="px-3 py-1.5 bg-yellow-100 text-yellow-700 rounded-full text-sm font-medium shadow-sm flex items-center hover:bg-yellow-200 cursor-default transition-colors">
+                                    🧮 會計
+                                </span>
+                                <span class="px-3 py-1.5 bg-purple-100 text-purple-700 rounded-full text-sm font-medium shadow-sm flex items-center hover:bg-purple-200 cursor-default transition-colors">
+                                    💻 資訊科技
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Details -->
+                <div class="md:col-span-8 lg:col-span-9 space-y-6">
+                    
+                    <!-- 幹部經歷 -->
+                    <div class="bg-white rounded-3xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition-shadow relative overflow-hidden">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-green-50 rounded-full -mr-16 -mt-16 opacity-50"></div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-4 flex items-center relative z-10">
+                            <span class="w-8 h-8 rounded-full bg-green-100 text-green-600 flex items-center justify-center mr-3">👑</span>
+                            幹部經歷
+                        </h3>
+                        <div class="relative pl-6 border-l-2 border-green-200 space-y-6 relative z-10">
+                            <div class="relative">
+                                <div class="absolute -left-[31px] top-1 w-4 h-4 rounded-full timeline-dot-green border-2 border-white shadow-sm"></div>
+                                <h4 class="font-bold text-gray-800 text-lg">班長</h4>
+                                <p class="text-green-600 text-sm font-medium mb-1">高一上學期</p>
+                                <p class="text-gray-600 text-sm">負責協助導師處理班級事務，統整班級各項活動與聯絡事項，培養了良好的溝通協調與領導能力。</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 檢定證照 -->
+                    <div class="bg-white rounded-3xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition-shadow relative overflow-hidden">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-yellow-50 rounded-full -mr-16 -mt-16 opacity-50"></div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-4 flex items-center relative z-10">
+                            <span class="w-8 h-8 rounded-full bg-yellow-100 text-yellow-600 flex items-center justify-center mr-3">📜</span>
+                            檢定證照
+                        </h3>
+                        <ul class="space-y-3 relative z-10">
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-yellow-500 mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                <div>
+                                    <span class="font-bold text-gray-700">會計事務-人工記帳 丙級證照</span>
+                                    <p class="text-sm text-gray-500">具備基礎會計處理能力，熟悉傳票編製、過帳及試算表編製。</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-yellow-500 mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                <div>
+                                    <span class="font-bold text-gray-700">電腦軟體應用 丙級證照</span>
+                                    <p class="text-sm text-gray-500">熟練掌握Word、Excel等文書處理軟體操作與應用。</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- 活動經驗 -->
+                    <div class="bg-white rounded-3xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition-shadow relative overflow-hidden">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-pink-50 rounded-full -mr-16 -mt-16 opacity-50"></div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-4 flex items-center relative z-10">
+                            <span class="w-8 h-8 rounded-full bg-pink-100 text-pink-600 flex items-center justify-center mr-3">🏆</span>
+                            活動經驗
+                        </h3>
+                        <div class="relative pl-6 border-l-2 border-pink-200 space-y-6 relative z-10">
+                            <div class="relative">
+                                <div class="absolute -left-[31px] top-1 w-4 h-4 rounded-full timeline-dot-pink border-2 border-white shadow-sm"></div>
+                                <h4 class="font-bold text-gray-800 text-lg">參加全國高級中等學校閱讀心得寫作比賽</h4>
+                                <p class="text-pink-600 text-sm font-medium mb-1">在校期間</p>
+                                <p class="text-gray-600 text-sm">結合平常喜歡閱讀的習慣，將書中知識內化並撰寫成心得參賽，訓練了邏輯思考與文字表達能力。</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 讀書計畫 (Study Plan) Section -->
+        <section id="study-plan" class="scroll-mt-24">
+            <div class="flex items-center space-x-3 mb-8">
+                <div class="h-8 w-2 bg-blue-300 rounded-full"></div>
+                <h2 class="text-3xl font-bold text-gray-800">讀書計畫 <span class="text-lg font-normal text-gray-500 ml-2">Study Plan</span></h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Short term -->
+                <div class="bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden hover:-translate-y-1 hover:shadow-lg transition-all duration-300 group">
+                    <div class="bg-blue-100 p-4 border-b border-blue-50 flex items-center justify-between">
+                        <h3 class="font-bold text-blue-800 text-lg">近程計畫</h3>
+                        <span class="bg-white text-blue-600 text-xs px-2 py-1 rounded-full font-bold">錄取前</span>
+                    </div>
+                    <div class="p-6 space-y-3">
+                        <p class="text-sm text-gray-600 flex items-start"><span class="mr-2 text-blue-400">▪</span> 持續加強英文能力，準備多益測驗。</p>
+                        <p class="text-sm text-gray-600 flex items-start"><span class="mr-2 text-blue-400">▪</span> 複習高中會計及資訊專業科目，銜接大學課程。</p>
+                        <p class="text-sm text-gray-600 flex items-start"><span class="mr-2 text-blue-400">▪</span> 廣泛閱讀商業週刊，了解業界時事動態。</p>
+                    </div>
+                </div>
+
+                <!-- Medium term -->
+                <div class="bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden hover:-translate-y-1 hover:shadow-lg transition-all duration-300 group">
+                    <div class="bg-purple-100 p-4 border-b border-purple-50 flex items-center justify-between">
+                        <h3 class="font-bold text-purple-800 text-lg">中程計畫</h3>
+                        <span class="bg-white text-purple-600 text-xs px-2 py-1 rounded-full font-bold">大學期間</span>
+                    </div>
+                    <div class="p-6 space-y-3">
+                        <p class="text-sm text-gray-600 flex items-start"><span class="mr-2 text-purple-400">▪</span> 考取進階會計及資訊相關專業證照（如乙級）。</p>
+                        <p class="text-sm text-gray-600 flex items-start"><span class="mr-2 text-purple-400">▪</span> 積極參與系學會或相關社團，拓展人際關係。</p>
+                        <p class="text-sm text-gray-600 flex items-start"><span class="mr-2 text-purple-400">▪</span> 爭取企業實習機會，將理論與實務結合。</p>
+                    </div>
+                </div>
+
+                <!-- Long term -->
+                <div class="bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden hover:-translate-y-1 hover:shadow-lg transition-all duration-300 group">
+                    <div class="bg-pink-100 p-4 border-b border-pink-50 flex items-center justify-between">
+                        <h3 class="font-bold text-pink-800 text-lg">遠程計畫</h3>
+                        <span class="bg-white text-pink-600 text-xs px-2 py-1 rounded-full font-bold">畢業後</span>
+                    </div>
+                    <div class="p-6 space-y-3">
+                        <p class="text-sm text-gray-600 flex items-start"><span class="mr-2 text-pink-400">▪</span> 投入職場，成為專業的資訊/財會人員。</p>
+                        <p class="text-sm text-gray-600 flex items-start"><span class="mr-2 text-pink-400">▪</span> 持續進修新科技（如大數據分析、AI應用）。</p>
+                        <p class="text-sm text-gray-600 flex items-start"><span class="mr-2 text-pink-400">▪</span> 考取國際專業證照，提升個人競爭力。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 作品集 (Portfolio) Section -->
+        <section id="portfolio" class="scroll-mt-24">
+            <div class="flex items-center space-x-3 mb-8">
+                <div class="h-8 w-2 bg-purple-300 rounded-full"></div>
+                <h2 class="text-3xl font-bold text-gray-800">作品集 <span class="text-lg font-normal text-gray-500 ml-2">Portfolio</span></h2>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Portfolio Item 1 -->
+                <div class="group bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-xl transition-all duration-300 cursor-pointer">
+                    <div class="h-48 bg-gray-200 overflow-hidden">
+                        <img src="https://placehold.co/600x400/A7C7E7/ffffff?text=專題報告" alt="專題報告" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-5">
+                        <div class="flex items-center justify-between mb-2">
+                            <h3 class="font-bold text-gray-800 text-lg">資訊專題報告</h3>
+                            <span class="text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded-full">高二</span>
+                        </div>
+                        <p class="text-sm text-gray-500 line-clamp-2">利用試算表與資料庫軟體，進行地方產業的數據統計與視覺化分析報告。</p>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 2 -->
+                <div class="group bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-xl transition-all duration-300 cursor-pointer">
+                    <div class="h-48 bg-gray-200 overflow-hidden">
+                        <img src="https://placehold.co/600x400/F8C8DC/ffffff?text=閱讀心得" alt="閱讀心得" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-5">
+                        <div class="flex items-center justify-between mb-2">
+                            <h3 class="font-bold text-gray-800 text-lg">參賽小論文/心得</h3>
+                            <span class="text-xs bg-pink-100 text-pink-700 px-2 py-1 rounded-full">獲獎</span>
+                        </div>
+                        <p class="text-sm text-gray-500 line-clamp-2">參與全國高級中等學校閱讀心得寫作比賽之得獎作品，探討經濟學相關書籍。</p>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 3 -->
+                <div class="group bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-xl transition-all duration-300 cursor-pointer">
+                    <div class="h-48 bg-gray-200 overflow-hidden">
+                        <img src="https://placehold.co/600x400/FDFD96/aaaaaa?text=證照影本" alt="證照影本" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-5">
+                        <div class="flex items-center justify-between mb-2">
+                            <h3 class="font-bold text-gray-800 text-lg">專業證照合集</h3>
+                            <span class="text-xs bg-yellow-100 text-yellow-700 px-2 py-1 rounded-full">認證</span>
+                        </div>
+                        <p class="text-sm text-gray-500 line-clamp-2">包含會計事務人工記帳丙級、電腦軟體應用丙級等國家級技能檢定合格證書。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-100 py-8 mt-12">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <p class="text-gray-500 text-sm">© 2024 黃大名 Portfolio. All rights reserved.</p>
+            <p class="text-gray-400 text-xs mt-2">新北市立三重商工 資料處理科</p>
+        </div>
+    </footer>
+
+    <!-- Interactive Script for Mobile Menu -->
+    <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        const menuLinks = menu.querySelectorAll('a');
+
+        // Toggle mobile menu visibility
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        menuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
